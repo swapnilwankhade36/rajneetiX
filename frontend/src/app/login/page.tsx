@@ -2,7 +2,7 @@ import { Card, CardContent, CardFooter, CardHeader } from '@/components/ui/card'
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 import { Input } from '@/components/ui/input';
 import { Button } from '@/components/ui/button';
-import { SmartphoneIcon, EyeIcon, FingerprintIcon, ExternalLinkIcon, FileTextIcon, ShieldCheckIcon } from 'lucide-react';
+import { SmartphoneIcon, EyeOffIcon, FingerprintIcon, ExternalLinkIcon, FileTextIcon, IdCardIcon, EyeIcon } from 'lucide-react';
 import Link from 'next/link';
 
 export default function Login() {
@@ -11,81 +11,80 @@ export default function Login() {
       {/* Background Effects */}
       <div className="absolute inset-0 z-0">
         {/* Government Building Background */}
-        <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1541904815592-cb8e670d8a59?auto=format&fit=crop&w=2000&q=80')] bg-cover bg-center bg-no-repeat opacity-40 mix-blend-overlay" />
+        <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1541904815592-cb8e670d8a59?auto=format&fit=crop&w=2000&q=80')] bg-cover bg-center bg-no-repeat opacity-50 mix-blend-overlay" />
         
-        {/* Glowing light-blue India map outline (simulating the dotted/neon glow) */}
-        <div className="absolute top-[40%] left-[20%] -translate-y-1/2 -translate-x-1/2 w-[800px] h-[800px] bg-[url('https://upload.wikimedia.org/wikipedia/commons/e/e4/India_map_en.svg')] bg-no-repeat bg-center bg-contain opacity-40 drop-shadow-[0_0_15px_rgba(0,180,255,1)] filter brightness-[2] hue-rotate-[180deg] saturate-[300] mix-blend-screen" />
+        {/* Glowing light-blue India map outline */}
+        <div className="absolute top-[50%] left-[20%] -translate-y-1/2 -translate-x-1/2 w-[900px] h-[900px] bg-[url('https://upload.wikimedia.org/wikipedia/commons/e/e4/India_map_en.svg')] bg-no-repeat bg-center bg-contain opacity-40 drop-shadow-[0_0_15px_rgba(0,180,255,1)] filter brightness-[2] hue-rotate-[180deg] saturate-[300] mix-blend-screen" />
         
         {/* Vertical lines and nodes typical of the right side network background */}
-        <div className="absolute right-0 top-0 bottom-0 w-[400px] bg-[url('https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&q=80')] bg-cover opacity-10 mix-blend-screen" />
+        <div className="absolute right-0 top-0 bottom-0 w-[400px] bg-[url('https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&q=80')] bg-cover opacity-20 mix-blend-screen" />
       </div>
 
-      {/* Top Header Strip - White gradient fading to transparent right */}
-      <div className="w-full relative z-20 flex flex-col items-center">
-        {/* The solid/gradient top bar */}
-        <div className="absolute inset-0 w-full h-[80px] bg-gradient-to-r from-slate-100 via-white/80 to-transparent z-0"></div>
+      {/* Top Header */}
+      <div className="absolute top-0 w-full z-20 flex flex-col items-center">
+        {/* TransparencyGov is at the top left */}
+        <div className="absolute top-6 left-8 text-[22px] font-bold tracking-tight text-white drop-shadow-md">
+          TransparencyGov
+        </div>
         
-        <div className="w-full max-w-[1400px] mx-auto flex items-center justify-between px-8 py-3 relative z-10">
-          <div className="text-2xl font-bold tracking-tight text-slate-900 w-1/3">
-            TransparencyGov
-          </div>
-          
-          <div className="flex flex-col items-center justify-center w-1/3 -mt-2">
-              {/* National Emblem replacing actual Ashoka Pillar */}
-              <div className="w-[60px] h-[75px] flex items-center justify-center font-bold text-[10px] leading-tight text-center text-[#D4AF37] mb-1">
-                  <ShieldCheckIcon className="w-10 h-10 text-[#D4AF37] drop-shadow-md" />
-              </div>
-              <p className="text-[14px] font-sans text-slate-800 tracking-wide font-medium whitespace-nowrap">
-                National Portal of India <span className="text-slate-400 mx-1">|</span> e-Verification Services
-              </p>
-          </div>
+        {/* Emblem at the top center */}
+        <div className="mt-2 flex flex-col items-center z-30">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/55/Emblem_of_India.svg/800px-Emblem_of_India.svg.png" alt="Emblem of India" className="h-[75px] w-auto drop-shadow-lg" />
+          <p className="text-[10px] font-bold text-black mt-1">सत्यमेव जयते</p>
+        </div>
 
-          <div className="w-1/3" /> {/* Spacer */}
+        {/* Horizontal strip */}
+        <div className="w-full bg-[#f4f6f8]/90 backdrop-blur-sm h-[32px] mt-1 flex items-center justify-center shadow-sm">
+          <p className="text-[14px] font-sans text-slate-800 tracking-wide font-medium">
+            National Portal of India <span className="text-slate-400 mx-1">|</span> e-Verification Services
+          </p>
         </div>
       </div>
 
       {/* Main Content */}
-      <main className="flex-1 flex w-full max-w-[1400px] mx-auto items-center justify-between px-12 z-10 relative pt-10 pb-20">
+      <main className="flex-1 flex w-full max-w-[1400px] mx-auto items-center justify-between px-12 z-10 relative pt-20 pb-20 mt-10">
         
         {/* Left Side Hero Text */}
         <div className="max-w-2xl mt-12">
-          {/* Strictly ONE line for "Your Voice, Verified." as requested by reference */}
           <h1 className="text-[3.5rem] font-bold text-white mb-4 leading-[1.1] drop-shadow-lg tracking-tight whitespace-nowrap">
             Your Voice, Verified.
           </h1>
-          <p className="text-2xl text-slate-200/90 font-medium max-w-lg leading-snug drop-shadow-md">
-            Access political accountability through secure verification.
+          <p className="text-[22px] text-slate-200/90 font-medium max-w-lg leading-snug drop-shadow-md">
+            Access political accountability<br/>through secure verification.
           </p>
         </div>
 
         {/* Right Side Login Card */}
         <div className="w-[480px]">
-          <Card className="bg-[rgba(15,25,45,0.4)] backdrop-blur-[24px] border-[1.5px] border-white/20 shadow-[0_0_50px_rgba(0,100,255,0.15)] rounded-[16px] relative pt-10 pb-4 overflow-visible">
+          <Card className="bg-white/30 backdrop-blur-xl border border-blue-200/40 shadow-[0_0_50px_rgba(0,180,255,0.2)] rounded-[16px] relative pt-10 pb-4 overflow-visible px-4">
             
             {/* Overlapping Top Emblem */}
             <div className="absolute -top-10 left-1/2 -translate-x-1/2 w-20 h-20 bg-gradient-to-b from-[#FFFBEA] to-[#F1DE92] border-2 border-white rounded-full flex flex-col items-center justify-center shadow-[0_0_20px_rgba(255,255,255,0.3)] z-20">
-              <ShieldCheckIcon className="w-10 h-10 text-slate-900" />
+              <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/55/Emblem_of_India.svg/800px-Emblem_of_India.svg.png" alt="Emblem" className="h-[46px] w-auto drop-shadow-md pb-1" />
+              <p className="text-[5px] font-bold text-black absolute bottom-2">सत्यमेव जयते</p>
             </div>
 
             <CardHeader className="text-center pb-6">
-              <h2 className="text-[22px] font-bold text-white tracking-tight drop-shadow-sm mt-2">Citizen Login &<br/>Accountability Portal</h2>
+              <h2 className="text-[22px] font-bold text-black tracking-tight drop-shadow-sm mt-2 leading-[1.2]">
+                Citizen Login &<br/>Accountability Portal
+              </h2>
             </CardHeader>
             
-            <CardContent className="px-8 flex flex-col items-center">
+            <CardContent className="px-4 flex flex-col items-center">
               <Tabs defaultValue="pan" className="w-full">
                 
                 {/* Tabs matching the pale gray/white style */}
-                <TabsList className="grid w-full grid-cols-2 bg-slate-200 p-1.5 rounded-xl mb-6 h-12 shadow-inner">
+                <TabsList className="grid w-full grid-cols-2 bg-slate-200/80 p-1 rounded-xl mb-6 h-12 shadow-inner">
                   <TabsTrigger 
                     value="pan" 
-                    className="rounded-lg data-[state=active]:bg-white data-[state=active]:text-slate-900 data-[state=active]:shadow-sm text-slate-600 font-semibold text-[15px] h-full transition-all"
+                    className="rounded-lg data-[state=active]:bg-white data-[state=active]:text-slate-900 data-[state=active]:shadow-sm text-slate-600 font-semibold text-[15px] h-full transition-all flex items-center justify-center"
                   >
-                    <FileTextIcon className="w-4 h-4 mr-2 opacity-70" />
+                    <IdCardIcon className="w-4 h-4 mr-2 opacity-70" />
                     PAN Card
                   </TabsTrigger>
                   <TabsTrigger 
                     value="voter" 
-                    className="rounded-lg data-[state=active]:bg-white data-[state=active]:text-slate-900 text-slate-600 font-semibold text-[15px] h-full transition-all"
+                    className="rounded-lg data-[state=active]:bg-transparent data-[state=active]:text-slate-900 text-slate-600 hover:text-slate-800 font-semibold text-[15px] h-full transition-all flex items-center justify-center"
                   >
                     Voter ID
                   </TabsTrigger>
@@ -98,7 +97,7 @@ export default function Login() {
                       placeholder="Enter PAN Number" 
                       className="h-[52px] bg-white text-black border-slate-300 rounded-xl pr-10 pl-4 focus-visible:ring-2 focus-visible:ring-[#2B6CC4] text-[15px] shadow-sm"
                     />
-                    <FileTextIcon className="absolute right-4 top-1/2 -translate-y-1/2 w-5 h-5 text-slate-800" />
+                    <IdCardIcon className="absolute right-4 top-1/2 -translate-y-1/2 w-5 h-5 text-slate-500" />
                   </div>
                   <div className="relative">
                     <Input 
@@ -106,17 +105,17 @@ export default function Login() {
                       placeholder="Enter Password" 
                       className="h-[52px] bg-white text-black border-slate-300 rounded-xl pr-10 pl-4 focus-visible:ring-2 focus-visible:ring-[#2B6CC4] text-[15px] shadow-sm"
                     />
-                    <EyeIcon className="absolute right-4 top-1/2 -translate-y-1/2 w-5 h-5 text-slate-800 cursor-pointer hover:text-black" />
+                    <EyeOffIcon className="absolute right-4 top-1/2 -translate-y-1/2 w-5 h-5 text-slate-500 cursor-pointer hover:text-black" />
                   </div>
 
                   {/* Buttons Stacked Vertically with specific blue #2B6CC4 styling */}
                   <div className="flex flex-col gap-3 pt-2">
-                    <Button className="w-full h-[52px] bg-[#2B6CC4] hover:bg-blue-700 text-white font-semibold rounded-xl text-[16px] transition-all flex items-center justify-center shadow-lg">
+                    <Button className="w-full h-[52px] bg-[#2B6CC4] hover:bg-blue-700 text-white font-semibold rounded-xl text-[16px] transition-all flex items-center justify-center shadow-lg border border-blue-500/50">
                       <SmartphoneIcon className="w-5 h-5 mr-2" />
                       Request OTP
                     </Button>
                     <Link href="/dashboard" className="w-full">
-                      <Button className="w-full h-[52px] bg-[#2B6CC4] hover:bg-blue-700 text-white font-semibold rounded-xl text-[16px] transition-all shadow-lg">
+                      <Button className="w-full h-[52px] bg-[#2B6CC4] hover:bg-blue-700 text-white font-semibold rounded-xl text-[16px] transition-all shadow-lg border border-blue-500/50">
                         Login with Password
                       </Button>
                     </Link>
@@ -130,7 +129,7 @@ export default function Login() {
                       placeholder="Enter Voter ID" 
                       className="h-[52px] bg-white text-black border-slate-300 rounded-xl pr-10 pl-4 focus-visible:ring-2 focus-visible:ring-[#2B6CC4] text-[15px] shadow-sm"
                     />
-                    <FingerprintIcon className="absolute right-4 top-1/2 -translate-y-1/2 w-5 h-5 text-slate-800" />
+                    <FingerprintIcon className="absolute right-4 top-1/2 -translate-y-1/2 w-5 h-5 text-slate-500" />
                   </div>
                   <div className="relative">
                     <Input 
@@ -138,16 +137,16 @@ export default function Login() {
                       placeholder="Enter Password" 
                       className="h-[52px] bg-white text-black border-slate-300 rounded-xl pr-10 pl-4 focus-visible:ring-2 focus-visible:ring-[#2B6CC4] text-[15px] shadow-sm"
                     />
-                    <EyeIcon className="absolute right-4 top-1/2 -translate-y-1/2 w-5 h-5 text-slate-800 cursor-pointer hover:text-black" />
+                    <EyeOffIcon className="absolute right-4 top-1/2 -translate-y-1/2 w-5 h-5 text-slate-500 cursor-pointer hover:text-black" />
                   </div>
 
                   <div className="flex flex-col gap-3 pt-2">
-                    <Button className="w-full h-[52px] bg-[#2B6CC4] hover:bg-blue-700 text-white font-semibold rounded-xl text-[16px] transition-all flex items-center justify-center shadow-lg">
+                    <Button className="w-full h-[52px] bg-[#2B6CC4] hover:bg-blue-700 text-white font-semibold rounded-xl text-[16px] transition-all flex items-center justify-center shadow-lg border border-blue-500/50">
                       <SmartphoneIcon className="w-5 h-5 mr-2" />
                       Request OTP
                     </Button>
                     <Link href="/dashboard" className="w-full">
-                      <Button className="w-full h-[52px] bg-[#2B6CC4] hover:bg-blue-700 text-white font-semibold rounded-xl text-[16px] transition-all shadow-lg">
+                      <Button className="w-full h-[52px] bg-[#2B6CC4] hover:bg-blue-700 text-white font-semibold rounded-xl text-[16px] transition-all shadow-lg border border-blue-500/50">
                         Login with Password
                       </Button>
                     </Link>
@@ -156,20 +155,20 @@ export default function Login() {
               </Tabs>
             </CardContent>
             
-            <CardFooter className="flex flex-col border-t border-white/20 px-8 py-5 mt-2 space-y-4">
-              <div className="flex justify-between w-full text-[13px]">
-                <Link href="#" className="flex items-center text-white/90 hover:text-white transition-colors">
-                  <FileTextIcon className="w-3.5 h-3.5 mr-1.5 opacity-70" /> Detail Register
+            <CardFooter className="flex flex-col border-t border-white/20 px-4 py-5 mt-2 space-y-4">
+              <div className="flex justify-between w-full text-[13px] text-white font-medium">
+                <Link href="#" className="flex items-center hover:text-slate-200 transition-colors">
+                  <FileTextIcon className="w-4 h-4 mr-1.5" /> Detail Register
                 </Link>
-                <Link href="#" className="text-white/90 hover:text-white transition-colors">
+                <Link href="#" className="hover:text-slate-200 transition-colors">
                   Forgot Password?
                 </Link>
               </div>
               <div className="w-full text-center flex items-center justify-center pt-2">
-                <Link href="#" className="flex items-center text-[13px] text-white/90 hover:text-white transition-colors">
-                  <EyeIcon className="w-3.5 h-3.5 mr-1.5 opacity-70" />
+                <Link href="#" className="flex items-center text-[13px] text-white font-medium hover:text-slate-200 transition-colors tracking-wide">
+                  <EyeIcon className="w-4 h-4 mr-1.5" />
                   Sign in using other methods
-                  <ExternalLinkIcon className="w-3.5 h-3.5 ml-1.5 opacity-70" />
+                  <ExternalLinkIcon className="w-4 h-4 ml-1.5" />
                 </Link>
               </div>
             </CardFooter>
@@ -178,9 +177,9 @@ export default function Login() {
       </main>
 
       {/* Official Disclaimers Footer */}
-      <footer className="absolute bottom-0 w-full text-center py-3 bg-[rgba(5,15,30,0.8)] backdrop-blur-md border-t border-white/10 z-20">
+      <footer className="absolute bottom-0 w-full text-center py-2 bg-[#050f1e]/90 backdrop-blur-md border-t border-white/10 z-20">
         <p className="text-[12px] text-slate-400 font-medium tracking-wide">
-          Official disclaimers: National portal of India including e-services or accountabilities. Citizens, registers and for official government.
+          Official disclaimers: Natiol and spoce of India siiincluding: ovennocoudund:t or accoatablities. | Citizzars, registers andefor official government.
         </p>
       </footer>
     </div>

@@ -146,21 +146,10 @@ export default function Login() {
               src="/Emblem_of_India_gold.svg"
               alt="Emblem of India"
               style={{
-                height: 110,
+                height: 115,
                 width: 'auto',
               }}
             />
-            <span
-              style={{
-                fontSize: 8.5,
-                fontWeight: 700,
-                color: '#5c3f00',
-                letterSpacing: 2.5,
-                marginTop: 2,
-              }}
-            >
-              सत्यमेव जयते
-            </span>
           </div>
         </div>
 
@@ -268,7 +257,7 @@ export default function Login() {
               height: 120,
               borderRadius: '50%',
               background:
-                'linear-gradient(145deg, #fffbe8 0%, #f5e070 45%, #e8c230 100%)',
+                'linear-gradient(145deg, #ffffff 0%, #f4f7fb 100%)',
               border: '2.5px solid rgba(255,255,255,0.9)',
               boxShadow:
                 '0 6px 28px rgba(0,0,0,0.3), 0 0 0 4px rgba(255,255,255,0.18)',
@@ -282,22 +271,11 @@ export default function Login() {
               src="/Emblem_of_India_gold.svg"
               alt="Emblem"
               style={{
-                height: 90,
-                width: 90,
+                height: 95,
+                width: 95,
                 objectFit: 'contain',
               }}
             />
-            <span
-              style={{
-                fontSize: 4.5,
-                fontWeight: 800,
-                color: '#3a2800',
-                letterSpacing: 1.5,
-                marginTop: 1,
-              }}
-            >
-              सत्यमेव जयते
-            </span>
           </div>
 
           {/* Card body */}

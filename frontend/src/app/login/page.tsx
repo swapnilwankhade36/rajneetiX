@@ -37,10 +37,7 @@ export default function Login() {
           position: 'absolute',
           inset: 0,
           zIndex: 0,
-          backgroundImage: [
-            "url('https://upload.wikimedia.org/wikipedia/commons/thumb/b/b1/New_Parliament_House_India.jpg/1920px-New_Parliament_House_India.jpg')",
-            "url('https://images.unsplash.com/photo-1541904815592-cb8e670d8a59?auto=format&fit=crop&w=2000&q=85')",
-          ].join(', '),
+          backgroundImage: "url('/parliament.jpg')",
           backgroundSize: 'cover',
           backgroundPosition: 'center 35%',
           filter: 'brightness(0.45) saturate(1.05) sepia(0.15)',

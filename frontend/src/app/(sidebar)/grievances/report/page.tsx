@@ -49,24 +49,24 @@ export default function ReportGrievance() {
           <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
             {/* Water category (Active) */}
             <div className="relative">
-                <Card className="border-2 border-amber-400 shadow-[0_4px_20px_rgba(251,191,36,0.2)] bg-gradient-to-b from-amber-50 to-white cursor-pointer relative z-10">
+                <Card className="border-2 border-blue-500 shadow-[0_4px_20px_rgba(59,130,246,0.15)] bg-gradient-to-b from-blue-50 to-white cursor-pointer relative z-10 transition-all">
                 <CardContent className="flex flex-col items-center justify-center p-8 gap-4">
-                    <DropletIcon className="w-16 h-16 text-amber-600" />
-                    <span className="font-bold text-lg text-amber-700">WATER</span>
+                    <DropletIcon className="w-16 h-16 text-blue-600 stroke-[1.5]" />
+                    <span className="font-bold text-[15px] tracking-wide text-blue-800">WATER</span>
                 </CardContent>
                 </Card>
                 
                 {/* Simulated dropdown under Water category */}
-                <div className="absolute left-0 -bottom-20 w-80 bg-white border border-amber-300 shadow-xl rounded-xl p-4 z-20">
-                    <p className="text-xs font-semibold text-slate-600 mb-2">Select Problem Type</p>
+                <div className="absolute left-0 -bottom-20 w-80 bg-white border border-blue-200 shadow-xl rounded-xl p-4 z-20 animate-in slide-in-from-top-2">
+                    <p className="text-xs font-semibold text-slate-500 mb-2 uppercase tracking-wide">Select Problem Type</p>
                     <Select defaultValue="no_supply">
-                        <SelectTrigger className="w-full bg-white border-slate-300">
+                        <SelectTrigger className="w-full bg-slate-50 border-slate-200 focus:ring-0">
                             <SelectValue placeholder="Select type" />
                         </SelectTrigger>
                         <SelectContent>
-                            <SelectItem value="no_supply">No Supply</SelectItem>
-                            <SelectItem value="contamination">Contamination</SelectItem>
-                            <SelectItem value="pipeline_burst">Pipeline Burst</SelectItem>
+                            <SelectItem value="no_supply" className="font-medium text-slate-700">No Supply</SelectItem>
+                            <SelectItem value="contamination" className="font-medium text-slate-700">Contamination</SelectItem>
+                            <SelectItem value="pipeline_burst" className="font-medium text-slate-700">Pipeline Burst</SelectItem>
                         </SelectContent>
                     </Select>
                 </div>
@@ -112,20 +112,23 @@ export default function ReportGrievance() {
 
         {/* Right Side: Selection Summary */}
         <div className="w-full lg:w-96 mt-[120px] lg:mt-12">
-          <Card className="border-amber-300 shadow-md bg-white">
+          <Card className="border-blue-200 shadow-sm bg-white overflow-hidden">
+            <div className="w-full h-1 bg-blue-500" />
             <CardContent className="p-6 space-y-6">
               <div className="flex items-center gap-4 border-b border-slate-100 pb-4">
-                <DropletIcon className="w-8 h-8 text-amber-600" />
-                <span className="text-lg font-medium text-slate-800">Category Selected: <strong>Water</strong></span>
+                <div className="p-2 bg-blue-50 rounded-full">
+                  <DropletIcon className="w-6 h-6 text-blue-600" />
+                </div>
+                <span className="text-[15px] text-slate-600">Category Selected:<br/><strong className="text-lg text-slate-900">Water</strong></span>
               </div>
               
-              <div className="flex items-center gap-4 border-b border-slate-100 pb-4 pl-12">
-                <span className="text-lg font-medium text-slate-800">Problem Type: <strong>No Supply</strong></span>
+              <div className="flex items-center gap-4 border-b border-slate-100 pb-4 pl-14">
+                <span className="text-[15px] text-slate-600">Problem Type:<br/><strong className="text-lg text-slate-900">No Supply</strong></span>
               </div>
               
-              <div className="flex items-center gap-4 pt-2">
-                <FileOutputIcon className="w-6 h-6 text-slate-500" />
-                <span className="text-base text-slate-700 font-medium">Specify Water Problem in Details (Step 2)</span>
+              <div className="flex items-center gap-3 pt-2 bg-slate-50 p-4 rounded-lg border border-slate-100">
+                <FileOutputIcon className="w-5 h-5 text-slate-400 shrink-0" />
+                <span className="text-xs text-slate-600 font-medium leading-relaxed">Specify Water Problem in Details (Step 2)</span>
               </div>
             </CardContent>
           </Card>

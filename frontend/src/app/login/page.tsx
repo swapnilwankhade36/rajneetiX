@@ -149,6 +149,7 @@ export default function Login() {
                 height: 110,
                 width: 'auto',
                 borderRadius: '50%',
+                mixBlendMode: 'multiply',
               }}
             />
             <span
@@ -287,6 +288,7 @@ export default function Login() {
                 width: 90,
                 objectFit: 'contain',
                 borderRadius: '50%',
+                mixBlendMode: 'multiply',
               }}
             />
             <span

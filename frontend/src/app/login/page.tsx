@@ -21,17 +21,29 @@ export default function Login() {
         flexDirection: 'column',
       }}
     >
-      {/* ── LAYER 1: Parliament + Indian flag background photo ── */}
+      {/* ── LAYER 1: Parliament background ── */}
+      {/* CSS-based dark government building ambiance (fallback when image blocked) */}
       <div
         style={{
           position: 'absolute',
           inset: 0,
           zIndex: 0,
-          backgroundImage:
+          background: 'linear-gradient(160deg, #07112a 0%, #0c1e3d 25%, #0b1a35 55%, #091528 100%)',
+        }}
+      />
+      {/* Parliament photo overlay */}
+      <div
+        style={{
+          position: 'absolute',
+          inset: 0,
+          zIndex: 0,
+          backgroundImage: [
+            "url('https://upload.wikimedia.org/wikipedia/commons/thumb/b/b1/New_Parliament_House_India.jpg/1920px-New_Parliament_House_India.jpg')",
             "url('https://images.unsplash.com/photo-1541904815592-cb8e670d8a59?auto=format&fit=crop&w=2000&q=85')",
+          ].join(', '),
           backgroundSize: 'cover',
-          backgroundPosition: 'center 25%',
-          filter: 'brightness(0.55) saturate(1.1)',
+          backgroundPosition: 'center 35%',
+          filter: 'brightness(0.45) saturate(1.05) sepia(0.15)',
         }}
       />
 

@@ -143,7 +143,7 @@ export default function Login() {
             }}
           >
             <img
-              src="/emblem_gold.svg"
+              src="/Gemini_Emblem.png"
               alt="Emblem of India"
               style={{
                 height: 110,
@@ -280,7 +280,7 @@ export default function Login() {
             }}
           >
             <img
-              src="/emblem_gold.svg"
+              src="/Gemini_Emblem.png"
               alt="Emblem"
               style={{
                 height: 90,

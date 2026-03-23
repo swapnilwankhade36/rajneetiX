@@ -2,7 +2,7 @@ import { Header } from '@/components/layout/Header';
 import { Card, CardContent } from '@/components/ui/card';
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
 import { Button } from '@/components/ui/button';
-import { BadgeCheckIcon, LocateIcon } from 'lucide-react';
+import { LocateIcon } from 'lucide-react';
 import Image from 'next/image';
 
 const politicians = [
@@ -22,22 +22,22 @@ const politicians = [
 
 export default function LokSabha() {
   return (
-    <div className="min-h-screen bg-[#F4F7F6] font-sans flex flex-col">
+    <div className="min-h-screen bg-[#F9FAFB] font-sans flex flex-col">
       <Header variant="light" />
       
-      <main className="flex-1 max-w-7xl w-full mx-auto px-6 py-6 flex flex-col">
+      <main className="flex-1 max-w-7xl w-full mx-auto px-10 py-6 flex flex-col">
         {/* Title and Date */}
         <div className="flex justify-between items-end mb-4 border-b border-slate-200 pb-2">
-          <h2 className="text-3xl font-serif text-slate-800 tracking-tight">Lok Sabha</h2>
-          <span className="text-sm font-medium text-slate-500">Date: 06-2023, 10:00 PM</span>
+          <h2 className="text-3xl font-serif text-slate-800 tracking-tight font-bold">Lok Sabha</h2>
+          <span className="text-sm font-medium text-slate-600">Date: 06-2023, 10:00 PM</span>
         </div>
 
         {/* Filters */}
         <div className="flex gap-4 mb-8">
           <div className="flex items-center gap-2">
-            <span className="text-sm font-medium text-slate-600">State:</span>
+            <span className="text-sm font-medium text-slate-700">State:</span>
             <Select defaultValue="all">
-              <SelectTrigger className="w-[180px] bg-white border-slate-300">
+              <SelectTrigger className="w-[180px] bg-white border-slate-300 shadow-sm focus:ring-0">
                 <SelectValue placeholder="All" />
               </SelectTrigger>
               <SelectContent>
@@ -49,9 +49,9 @@ export default function LokSabha() {
             </Select>
           </div>
           <div className="flex items-center gap-2">
-            <span className="text-sm font-medium text-slate-600">Party:</span>
+            <span className="text-sm font-medium text-slate-700">Party:</span>
             <Select defaultValue="all">
-              <SelectTrigger className="w-[180px] bg-white border-slate-300">
+              <SelectTrigger className="w-[180px] bg-white border-slate-300 shadow-sm focus:ring-0">
                 <SelectValue placeholder="All" />
               </SelectTrigger>
               <SelectContent>
@@ -65,46 +65,47 @@ export default function LokSabha() {
         </div>
 
         {/* Grid of Politicians */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-4">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-6">
           {politicians.map((pol) => (
-            <Card key={pol.id} className="bg-white border-slate-200 hover:border-amber-300 transition-colors shadow-sm relative overflow-hidden flex flex-col group">
-              {/* V indicator (Verified/Terms) */}
-              {pol.verified && (
-                <div className="absolute top-2 right-2 flex items-center justify-center">
-                  <span className="text-xl font-serif text-amber-600 font-bold drop-shadow-sm">V</span>
+            <Card key={pol.id} className="bg-white border-[#D4AF37] border-opacity-70 shadow-sm relative overflow-hidden flex flex-col rounded-xl">
+              
+              <CardContent className="p-5 flex flex-col items-center flex-1 relative">
+                
+                {/* Party icon placeholder in top right of text area */}
+                <div className="absolute top-4 right-4 text-slate-400 opacity-60">
+                   <LocateIcon className="w-5 h-5" />
                 </div>
-              )}
-              {/* Dummy party logo placeholder */}
-              {!pol.verified && (
-                <div className="absolute top-2 right-2 opacity-50 text-slate-400">
-                  <LocateIcon className="w-5 h-5" />
-                </div>
-              )}
 
-              <CardContent className="p-4 flex flex-col items-center flex-1">
                 {/* Avatar */}
-                <div className="w-20 h-20 rounded-full overflow-hidden bg-slate-200 mb-4 border border-slate-100 shadow-inner shrink-0 relative">
+                <div className="w-20 h-20 rounded-full overflow-hidden bg-slate-200 mb-4 shadow-sm border border-slate-100 shrink-0 relative">
                   <Image src={pol.image} alt={pol.name} fill className="object-cover" />
+                  
+                  {/* Verified 'V' badge pinned to top-right of the avatar */}
+                  {pol.verified && (
+                    <div className="absolute top-0 right-0 w-6 h-6 bg-white rounded-full flex items-center justify-center shadow-sm">
+                      <span className="text-[#D4AF37] font-serif font-bold text-sm leading-none pl-0.5">V</span>
+                    </div>
+                  )}
                 </div>
 
                 {/* Info */}
                 <div className="text-center w-full">
-                  <h3 className="font-bold text-slate-900 text-[13px] leading-tight mb-1 truncate px-1" title={pol.name}>
+                  <h3 className="font-bold text-slate-900 text-[14px] leading-snug mb-2 truncate" title={pol.name}>
                     {pol.name}
                   </h3>
                   
-                  <div className="flex items-center justify-center gap-1.5 mb-1">
-                    <span className={`w-2 h-2 rounded-full ${pol.color}`}></span>
-                    <span className="text-xs font-bold text-slate-700">{pol.party}</span>
+                  <div className="flex items-center justify-center gap-1.5 mb-1.5">
+                    <span className={`w-2 h-2 rounded-full ${pol.color} shadow-sm`}></span>
+                    <span className="text-[11px] font-bold text-slate-700 tracking-wider uppercase">{pol.party}</span>
                   </div>
                   
                   <p className="text-[11px] text-slate-500 font-medium">
-                    Constituency: <span className="text-slate-800">{pol.constituency}</span>
+                    Constituency: <br/> <span className="text-slate-800 font-semibold">{pol.constituency}</span>
                   </p>
                 </div>
               </CardContent>
-              <div className="p-3 pt-0 mt-auto">
-                <Button variant="outline" className="w-full text-xs h-8 border-slate-300 text-slate-700 hover:bg-slate-50 font-semibold rounded-md">
+              <div className="p-4 pt-0 mt-auto">
+                <Button variant="outline" className="w-full text-xs h-8 border-slate-500 text-slate-800 hover:bg-slate-50 font-bold rounded-md bg-white">
                   View Profile
                 </Button>
               </div>
@@ -114,8 +115,8 @@ export default function LokSabha() {
       </main>
 
       {/* Footer */}
-      <footer className="w-full bg-[#1b2531] text-white/70 py-3 px-6 text-xs text-center border-t border-slate-800 mt-auto shadow-inner">
-        &copy; Government of India. | All relevant disclaimers are technical and applied under relevant local authorities.
+      <footer className="w-full bg-[#1F2937] text-slate-400 py-4 px-6 text-[11px] text-center mt-auto border-t border-slate-800">
+        &copy; Government of India | All internet disclaimers are technical and applied under relevant local authorities.
       </footer>
     </div>
   );

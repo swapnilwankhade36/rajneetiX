@@ -1,107 +1,163 @@
 import { Header } from '@/components/layout/Header';
 import { Card, CardContent } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
-import { FileWarningIcon, LocateIcon, BarChart3Icon } from 'lucide-react';
+import { Landmark, FileText, Megaphone, Search, User, Flag, Star, BarChart, TrendingUp, HelpCircle } from 'lucide-react';
 import Link from 'next/link';
 
 export default function Dashboard() {
   return (
-    <div className="min-h-screen bg-[#F4F7F6] font-sans relative">
+    <div className="min-h-screen bg-[#FDFDFD] font-sans relative overflow-x-hidden">
       <Header />
 
       {/* Decorative India Map Output on Right */}
-      <div className="absolute right-0 top-0 w-1/3 h-[90vh] bg-[url('https://upload.wikimedia.org/wikipedia/commons/e/e4/India_map_en.svg')] bg-no-repeat bg-right-top bg-contain opacity-5 pointer-events-none z-0 mix-blend-multiply flex items-center justify-end" />
+      <div className="absolute right-0 top-0 w-[50%] h-full bg-[url('/map_india.png')] bg-no-repeat bg-right-top bg-cover opacity-[0.03] pointer-events-none z-0 mix-blend-multiply flex items-center justify-end" />
 
       {/* Main Content Container */}
       <main className="max-w-[1400px] mx-auto px-8 py-10 relative z-10">
         
         {/* Welcome Section */}
-        <div className="mb-10">
-          <h1 className="text-3xl text-slate-800 font-medium tracking-tight">
+        <div className="mb-10 mt-4">
+          <h1 className="text-[2.2rem] text-slate-800 font-normal tracking-wide">
             Welcome, Citizen <span className="font-bold text-slate-900">Rohan Joshi!</span>
           </h1>
-          <p className="text-slate-500 mt-2 text-sm font-medium">Select a Sabha to view members or interact with community modules below.</p>
+          <h2 className="text-[2.2rem] font-bold text-slate-900 tracking-wide mt-1">
+            Your Portal for Accountable Governance.
+          </h2>
         </div>
 
-        {/* Top Split: Sabhas Section */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
-          
-          {/* Lok Sabha Card */}
-          <Link href="/lok-sabha">
-            <Card className="group overflow-hidden relative cursor-pointer border-0 shadow-[0_10px_40px_rgba(0,0,0,0.1)] hover:shadow-[0_15px_50px_rgba(29,78,216,0.3)] transition-all duration-300 rounded-[24px] h-[360px]">
-              {/* Background Architectural Drawing Mock */}
-              <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1582215682613-2d25ef6022e3?auto=format&fit=crop&w=600&q=80')] bg-cover bg-center grayscale opacity-15 group-hover:opacity-25 transition-opacity mix-blend-luminosity" />
-              {/* Overlay Gradient */}
-              <div className="absolute inset-0 bg-gradient-to-b from-[#1D4ED8]/95 via-[#1D4ED8]/85 to-[#1e3a8a]/95" />
-              
-              <CardContent className="relative h-full flex flex-col items-center justify-center p-8 text-center text-white z-10">
-                <div className="w-24 h-24 rounded-full bg-white/10 backdrop-blur border-2 border-white/20 flex items-center justify-center mb-6 shadow-2xl">
-                  {/* Mock Emblem */}
-                  <span className="text-[#D4AF37] font-bold text-xs uppercase tracking-wider">Emblem</span>
-                </div>
-                <h2 className="text-[2.5rem] font-bold mb-3 tracking-tight drop-shadow-md">Lok Sabha</h2>
-                <p className="opacity-90 font-medium font-sans text-base pt-3 border-t border-white/20 w-[80%] uppercase tracking-widest text-[#00E5FF]">Members of Parliament</p>
-              </CardContent>
-            </Card>
-          </Link>
-
-          {/* Rajya Sabha Card */}
-          <Link href="/dashboard">
-            <Card className="group overflow-hidden relative cursor-pointer border-0 shadow-[0_10px_40px_rgba(0,0,0,0.1)] hover:shadow-[0_15px_50px_rgba(4,120,87,0.3)] transition-all duration-300 rounded-[24px] h-[360px]">
-              <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1541904815592-cb8e670d8a59?auto=format&fit=crop&w=600&q=80')] bg-cover bg-center grayscale opacity-15 group-hover:opacity-25 transition-opacity mix-blend-luminosity" />
-              <div className="absolute inset-0 bg-gradient-to-b from-[#047857]/95 via-[#047857]/85 to-[#064e3b]/95" />
-              
-              <CardContent className="relative h-full flex flex-col items-center justify-center p-8 text-center text-white z-10">
-                <div className="w-24 h-24 rounded-full bg-white/10 backdrop-blur border-2 border-white/20 flex items-center justify-center mb-6 shadow-2xl">
-                  <span className="text-[#D4AF37] font-bold text-xs uppercase tracking-wider">Emblem</span>
-                </div>
-                <h2 className="text-[2.5rem] font-bold mb-3 tracking-tight drop-shadow-md">Rajya Sabha</h2>
-                <p className="opacity-90 font-medium font-sans text-base pt-3 border-t border-white/20 w-[80%] uppercase tracking-widest text-[#6EE7B7]">Council of States</p>
-              </CardContent>
-            </Card>
-          </Link>
-
-          {/* Vidhan Sabha Card */}
-          <Link href="/dashboard">
-            <Card className="group overflow-hidden relative cursor-pointer border-0 shadow-[0_10px_40px_rgba(0,0,0,0.1)] hover:shadow-[0_15px_50px_rgba(180,83,9,0.3)] transition-all duration-300 rounded-[24px] h-[360px]">
-              <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1510411850123-b1dca50a11ab?auto=format&fit=crop&w=600&q=80')] bg-cover bg-center grayscale opacity-15 group-hover:opacity-25 transition-opacity mix-blend-luminosity" />
-              <div className="absolute inset-0 bg-gradient-to-b from-[#b45309]/95 via-[#b45309]/85 to-[#78350f]/95" />
-              
-              <CardContent className="relative h-full flex flex-col items-center justify-center p-8 text-center text-white z-10">
-                <div className="w-24 h-24 rounded-full bg-white/10 backdrop-blur border-2 border-white/20 flex items-center justify-center mb-6 shadow-2xl">
-                  <span className="text-[#D4AF37] font-bold text-xs uppercase tracking-wider">Emblem</span>
-                </div>
-                <h2 className="text-[2.5rem] font-bold mb-3 tracking-tight drop-shadow-md">Vidhan Sabha</h2>
-                <p className="opacity-90 font-medium font-sans text-base pt-3 border-t border-white/20 w-[80%] uppercase tracking-widest text-[#FCD34D]">State Legislative Assembly</p>
-              </CardContent>
-            </Card>
-          </Link>
-
-        </div>
-
-        {/* Bottom Split: Interaction Section */}
-        <div>
-          <h3 className="text-2xl font-bold text-slate-800 mb-8 flex items-center tracking-tight">
-            <span className="w-2 h-8 bg-[#1D4ED8] rounded-full mr-4 inline-block shadow-sm"></span>
-            Interaction & Services
+        {/* Sabhas Section */}
+        <div className="mb-10">
+          <h3 className="text-xl font-bold text-slate-800 mb-4 tracking-tight">
+            Sabhas
           </h3>
           
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {/* Grievance Module */}
-            <Card className="border border-slate-200/60 shadow-[0_8px_30px_rgba(0,0,0,0.04)] rounded-[24px] overflow-hidden bg-white hover:shadow-xl transition-all relative">
-              <CardContent className="p-8 flex flex-col h-full">
-                <div className="flex justify-between items-start mb-6">
-                  <div>
-                    <h4 className="font-bold text-xl text-slate-900 mb-2 tracking-tight">Report a Grievance</h4>
-                    <p className="text-[15px] text-slate-500 font-medium leading-relaxed max-w-[85%]">Submit issues regarding local infrastructure or amenities directly to authorities.</p>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            
+            {/* Lok Sabha Card */}
+            <Card className="group relative overflow-hidden bg-gradient-to-tr from-[#DEEFFD] to-[#F4F9FF] border border-[#AFCFF0] shadow-[0_8px_20px_rgba(0,0,0,0.06)] rounded-2xl h-[240px] hover:shadow-[0_12px_25px_rgba(0,0,0,0.08)] transition-all">
+              <CardContent className="p-0 flex h-full">
+                {/* Left Visual Area */}
+                <div className="w-[45%] h-full relative flex items-center justify-center pt-8">
+                  <div className="absolute left-2 top-2 opacity-10">
+                    <img src="/ashok_stambh.png" alt="Emblem" className="w-12 h-auto grayscale" />
                   </div>
-                  <div className="w-14 h-14 rounded-2xl bg-blue-50/80 flex items-center justify-center text-blue-600 border border-blue-100/50 shadow-inner flex-shrink-0">
-                    <FileWarningIcon className="w-7 h-7" />
+                  <div className="relative">
+                    <Landmark className="w-24 h-24 text-[#2E4A71] opacity-90 drop-shadow-sm" strokeWidth={1.5} />
+                    <span className="absolute -top-1 right-2 text-xl">🇮🇳</span>
                   </div>
                 </div>
-                <div className="mt-auto pt-6 border-t border-slate-100">
-                  <Link href="/grievances/report" className="w-full">
-                    <Button className="w-full bg-[#1D4ED8] hover:bg-blue-700 text-white font-bold h-12 rounded-xl shadow-[0_4px_15px_rgba(29,78,216,0.2)] transition-all">
+                {/* Right Content Area */}
+                <div className="w-[55%] p-5 pl-2 flex flex-col justify-between">
+                  <div>
+                    <h4 className="font-bold text-xl text-slate-900 leading-tight">LOK SABHA</h4>
+                    <p className="text-sm text-slate-600 mb-3">House of the People</p>
+                    <ul className="space-y-1 text-[13px] font-medium text-slate-700">
+                      <li className="flex items-center gap-1.5"><span className="w-1 h-1 bg-slate-700 rounded-full"></span> Track your MP</li>
+                      <li className="flex items-center gap-1.5"><span className="w-1 h-1 bg-slate-700 rounded-full"></span> Work Done</li>
+                      <li className="flex items-center gap-1.5"><span className="w-1 h-1 bg-slate-700 rounded-full"></span> Attendance</li>
+                    </ul>
+                  </div>
+                  <Link href="/lok-sabha">
+                    <Button className="w-full bg-[#1A62B7] hover:bg-[#154d8f] text-white font-medium h-9 rounded-md mt-4 shadow-sm">
+                      View Sabha
+                    </Button>
+                  </Link>
+                </div>
+              </CardContent>
+            </Card>
+
+            {/* Rajya Sabha Card */}
+            <Card className="group relative overflow-hidden bg-gradient-to-tr from-[#D6F0E0] to-[#EEFDF3] border border-[#A7D8BA] shadow-[0_8px_20px_rgba(0,0,0,0.06)] rounded-2xl h-[240px] hover:shadow-[0_12px_25px_rgba(0,0,0,0.08)] transition-all">
+              <CardContent className="p-0 flex h-full">
+                <div className="w-[45%] h-full relative flex items-center justify-center pt-8">
+                  <div className="absolute left-2 top-2 opacity-10">
+                    <img src="/ashok_stambh.png" alt="Emblem" className="w-12 h-auto grayscale" />
+                  </div>
+                  <div className="relative">
+                     <Landmark className="w-24 h-24 text-[#2C6242] opacity-90 drop-shadow-sm" strokeWidth={1.5} />
+                  </div>
+                </div>
+                <div className="w-[55%] p-5 pl-2 flex flex-col justify-between">
+                  <div>
+                    <h4 className="font-bold text-xl text-slate-900 leading-tight">RAJYA SABHA</h4>
+                    <p className="text-sm text-slate-600 mb-3">Council of States</p>
+                    <ul className="space-y-1 text-[13px] font-medium text-slate-700">
+                      <li className="flex items-center gap-1.5"><span className="w-1 h-1 bg-slate-700 rounded-full"></span> State Representatives</li>
+                      <li className="flex items-center gap-1.5"><span className="w-1 h-1 bg-slate-700 rounded-full"></span> Committee Reports</li>
+                    </ul>
+                  </div>
+                  <Link href="/dashboard">
+                    <Button className="w-full bg-[#468A62] hover:bg-[#356d4d] text-white font-medium h-9 rounded-md mt-4 shadow-sm">
+                      View Sabha
+                    </Button>
+                  </Link>
+                </div>
+              </CardContent>
+            </Card>
+
+            {/* Vidhan Sabha Card */}
+            <Card className="group relative overflow-hidden bg-gradient-to-tr from-[#FBE8CD] to-[#FFF8EF] border border-[#E9C496] shadow-[0_8px_20px_rgba(0,0,0,0.06)] rounded-2xl h-[240px] hover:shadow-[0_12px_25px_rgba(0,0,0,0.08)] transition-all">
+              <CardContent className="p-0 flex h-full">
+                <div className="w-[45%] h-full relative flex items-center justify-center pt-8">
+                  <div className="absolute left-2 top-2 opacity-10">
+                    <img src="/ashok_stambh.png" alt="Emblem" className="w-12 h-auto grayscale" />
+                  </div>
+                  <div className="relative">
+                     <Landmark className="w-24 h-24 text-[#8C5D23] opacity-90 drop-shadow-sm" strokeWidth={1.5} />
+                  </div>
+                </div>
+                <div className="w-[55%] p-5 pl-2 flex flex-col justify-between">
+                  <div>
+                    <h4 className="font-bold text-xl text-slate-900 leading-tight">VIDHAN SABHA</h4>
+                    <p className="text-sm text-slate-600 mb-3">State Legislative Assembly</p>
+                    <ul className="space-y-1 text-[13px] font-medium text-slate-700">
+                      <li className="flex items-center gap-1.5"><span className="w-1 h-1 bg-slate-700 rounded-full"></span> Local MLAs</li>
+                      <li className="flex items-center gap-1.5"><span className="w-1 h-1 bg-slate-700 rounded-full"></span> Constituency Progress</li>
+                      <li className="flex items-center gap-1.5"><span className="w-1 h-1 bg-slate-700 rounded-full"></span> State Bills</li>
+                    </ul>
+                  </div>
+                  <Link href="/dashboard">
+                    <Button className="w-full bg-[#E59740] hover:bg-[#c67c2d] text-white font-medium h-9 rounded-md mt-4 shadow-sm">
+                      View Sabha
+                    </Button>
+                  </Link>
+                </div>
+              </CardContent>
+            </Card>
+
+          </div>
+        </div>
+
+        {/* Interaction Section */}
+        <div>
+          <h3 className="text-xl font-bold text-slate-800 mb-4 tracking-tight">
+            Interaction
+          </h3>
+          
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            {/* Grievance Card */}
+            <Card className="group relative overflow-hidden bg-white border border-[#D1DFFA] shadow-[0_8px_20px_rgba(0,0,0,0.04)] rounded-2xl h-[220px] hover:shadow-[0_12px_25px_rgba(0,0,0,0.06)] transition-all">
+              <CardContent className="p-0 flex h-full">
+                {/* Left Blue Accent Bar + Icon */}
+                <div className="w-[40%] h-full relative flex items-center justify-center border-l-8 border-[#3D7BD4] bg-slate-50/50">
+                   <div className="relative z-10 flex text-[#3D7BD4]">
+                     <FileText className="w-12 h-12" strokeWidth={1.5} />
+                     <Megaphone className="w-10 h-10 absolute -bottom-3 -right-6 transform -rotate-12" strokeWidth={1.5} />
+                   </div>
+                </div>
+                <div className="w-[60%] p-4 pl-3 flex flex-col justify-between">
+                  <div>
+                    <h4 className="font-bold text-[15px] text-slate-900 leading-tight uppercase">REPORT CORRUPTION<br/>& GRIEVANCES</h4>
+                    <p className="text-[12px] text-slate-600 mt-1 mb-2 font-medium">Vigilance & Grievances Dept.</p>
+                    <ul className="space-y-0.5 text-[11px] font-medium text-slate-700 tracking-tight">
+                      <li className="flex items-center gap-1.5"><span className="w-1 h-1 bg-slate-700 rounded-full"></span> File Corruption Complaints</li>
+                      <li className="flex items-center gap-1.5"><span className="w-1 h-1 bg-slate-700 rounded-full"></span> Public Misconduct</li>
+                      <li className="flex items-center gap-1.5"><span className="w-1 h-1 bg-slate-700 rounded-full"></span> Infrastructure Issues</li>
+                      <li className="flex items-center gap-1.5"><span className="w-1 h-1 bg-slate-700 rounded-full"></span> Service Delays</li>
+                    </ul>
+                  </div>
+                  <Link href="/grievances/report">
+                    <Button className="w-full bg-[#3D7BD4] hover:bg-[#2c5fbd] text-white font-medium h-8 text-[13px] rounded-md mt-2 shadow-sm">
                       Submit Report
                     </Button>
                   </Link>
@@ -109,55 +165,83 @@ export default function Dashboard() {
               </CardContent>
             </Card>
 
-            {/* Constituencies Map Module */}
-            <Card className="border border-slate-200/60 shadow-[0_8px_30px_rgba(0,0,0,0.04)] rounded-[24px] overflow-hidden bg-white hover:shadow-xl transition-all">
-              <CardContent className="p-8 flex flex-col h-full">
-                 <div className="flex justify-between items-start mb-6">
-                  <div>
-                    <h4 className="font-bold text-xl text-slate-900 mb-2 tracking-tight">Constituency Maps</h4>
-                    <p className="text-[15px] text-slate-500 font-medium leading-relaxed max-w-[85%]">Explore geographical boundaries and demographic data of electoral regions.</p>
-                  </div>
-                  <div className="w-14 h-14 rounded-2xl bg-purple-50/80 flex items-center justify-center text-purple-600 border border-purple-100/50 shadow-inner flex-shrink-0">
-                    <LocateIcon className="w-7 h-7" />
-                  </div>
+            {/* Search Politician Card */}
+            <Card className="group relative overflow-hidden bg-[#FAFBFC] border border-[#DEE3E9] shadow-[0_8px_20px_rgba(0,0,0,0.04)] rounded-2xl h-[220px] hover:shadow-[0_12px_25px_rgba(0,0,0,0.06)] transition-all">
+              <CardContent className="p-0 flex h-full">
+                <div className="w-[40%] h-full relative flex items-center justify-center">
+                   <div className="relative z-10 text-[#476587] flex flex-col items-center">
+                     <div className="relative">
+                       <Search className="w-14 h-14 absolute -top-2 -right-2 z-10 text-[#2C4159]" strokeWidth={2} />
+                       <User className="w-16 h-16 opacity-80" strokeWidth={1.5} />
+                     </div>
+                     <div className="absolute -left-2 top-2  transform -rotate-12 text-[#6D8DAE]"><Flag className="w-6 h-6" strokeWidth={1.5} /></div>
+                     <div className="absolute -right-1 bottom-4 transform rotate-12 text-[#6D8DAE]"><Flag className="w-6 h-6" strokeWidth={1.5} /></div>
+                   </div>
                 </div>
-                <div className="mt-auto pt-6 border-t border-slate-100">
-                   <Button className="w-full bg-slate-900 hover:bg-slate-800 text-white font-bold h-12 rounded-xl shadow-[0_4px_15px_rgba(0,0,0,0.2)] transition-all">
-                      View Map
-                   </Button>
+                <div className="w-[60%] p-4 pl-3 flex flex-col justify-between">
+                  <div className="pt-2">
+                    <h4 className="font-bold text-[17px] text-slate-900 leading-tight uppercase">SEARCH<br/>POLITICIAN</h4>
+                    <p className="text-[13px] text-slate-600 mt-2 font-medium">Find by Name,<br/>Constituency, or Party</p>
+                  </div>
+                  <Link href="/dashboard">
+                    <Button className="w-[90%] bg-[#5C7D9E] hover:bg-[#466585] text-white font-medium h-8 text-[13px] rounded-md mt-2 shadow-sm mx-auto block">
+                      View Marp
+                    </Button>
+                  </Link>
                 </div>
               </CardContent>
             </Card>
 
-            {/* Performance Analytics */}
-            <Card className="border border-slate-200/60 shadow-[0_8px_30px_rgba(0,0,0,0.04)] rounded-[24px] overflow-hidden bg-white hover:shadow-xl transition-all">
-              <CardContent className="p-8 flex flex-col h-full">
-                 <div className="flex justify-between items-start mb-6">
-                  <div>
-                    <h4 className="font-bold text-xl text-slate-900 mb-2 tracking-tight">Performance Analytics</h4>
-                    <p className="text-[15px] text-slate-500 font-medium leading-relaxed max-w-[85%]">View aggregated ratings, attendance records, and project completion data.</p>
-                  </div>
-                  <div className="w-14 h-14 rounded-2xl bg-emerald-50/80 flex items-center justify-center text-emerald-600 border border-emerald-100/50 shadow-inner flex-shrink-0">
-                    <BarChart3Icon className="w-7 h-7" />
-                  </div>
+            {/* Public Reviews Card */}
+            <Card className="group relative overflow-hidden bg-gradient-to-tr from-[#FFF7DD] to-[#FFFDF7] border border-[#E9D8A4] shadow-[0_8px_20px_rgba(0,0,0,0.04)] rounded-2xl h-[220px] hover:shadow-[0_12px_25px_rgba(0,0,0,0.06)] transition-all">
+              <CardContent className="p-0 flex h-full">
+                <div className="w-[40%] h-full relative flex items-center justify-center">
+                   <div className="relative z-10 flex flex-col items-center justify-center w-full px-2">
+                     <div className="flex border-b-2 border-[#8C6D23] pb-1 w-full justify-center">
+                       <Star className="w-5 h-5 text-[#D1A02E] fill-[#D1A02E]" />
+                       <Star className="w-5 h-5 text-[#D1A02E] fill-[#D1A02E]" />
+                       <Star className="w-5 h-5 text-[#D1A02E] fill-[#D1A02E]" />
+                       <Star className="w-5 h-5 text-[#D1A02E] fill-[#D1A02E]" />
+                       <Star className="w-5 h-5 text-[#D1A02E] fill-[#e6e6e6]" />
+                     </div>
+                     <div className="flex w-full items-end justify-center mt-2 gap-1 relative h-10">
+                       <div className="w-4 bg-[#6D8E5F] h-4"></div>
+                       <div className="w-4 bg-[#6D8E5F] h-6"></div>
+                       <div className="w-4 bg-[#6D8E5F] h-8"></div>
+                       <div className="w-4 bg-[#6D8E5F] h-10"></div>
+                       <TrendingUp className="w-10 h-10 text-[#B88719] absolute -top-2 right-1" strokeWidth={2.5} />
+                     </div>
+                   </div>
                 </div>
-                <div className="mt-auto pt-6 border-t border-slate-100">
-                    <Button className="w-full bg-slate-900 hover:bg-slate-800 text-white font-bold h-12 rounded-xl shadow-[0_4px_15px_rgba(0,0,0,0.2)] transition-all">
+                <div className="w-[60%] p-4 pl-3 flex flex-col justify-between">
+                  <div>
+                    <h4 className="font-bold text-[16px] text-slate-900 leading-tight uppercase">PUBLIC REVIEWS<br/>& OPINION</h4>
+                    <ul className="space-y-1.5 text-[12px] font-medium text-slate-700 tracking-tight mt-3">
+                      <li className="flex items-start gap-1.5"><span className="w-1.5 h-1.5 mt-1 bg-slate-700 rounded-full flex-shrink-0"></span> Overall Citizen Verdict</li>
+                      <li className="flex items-start gap-1.5"><span className="w-1.5 h-1.5 mt-1 bg-slate-700 rounded-full flex-shrink-0"></span> View Detailed<br/>Community Reviews</li>
+                    </ul>
+                  </div>
+                  <Link href="/dashboard">
+                    <Button className="w-full bg-[#C29630] hover:bg-[#a67d22] text-white font-medium h-8 text-[13px] rounded-md mt-2 shadow-sm">
                       View Reviews
                     </Button>
+                  </Link>
                 </div>
               </CardContent>
             </Card>
+
           </div>
         </div>
 
       </main>
 
-      {/* Watermark */}
-      <div className="fixed bottom-10 right-10 opacity-[0.04] pointer-events-none z-0 flex items-center gap-4">
-        <p className="text-[6rem] font-bold tracking-tighter text-slate-900 uppercase leading-none font-sans">
-          My Bharat <br/> <span className="text-slate-950 font-black">2026</span>
-        </p>
+      {/* Watermark Logo Bottom Right */}
+      <div className="fixed bottom-6 right-8 flex items-end gap-2 z-0 opacity-80 pointer-events-none">
+        <div className="text-right">
+          <p className="text-[14px] font-bold text-slate-800 leading-tight">My<br/>Bharat</p>
+          <p className="text-[10px] font-bold text-[#E48A3C] uppercase tracking-wider">2026</p>
+        </div>
+        <img src="/map_india.png" alt="India flag colors" className="w-10 h-14 object-contain brightness-95 opacity-90" />
       </div>
     </div>
   );

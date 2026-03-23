@@ -143,12 +143,11 @@ export default function Login() {
             }}
           >
             <img
-              src="/ashok_stambh.jpg"
+              src="/ashok_stambh.png"
               alt="Emblem of India"
               style={{
                 height: 72,
                 width: 'auto',
-                mixBlendMode: 'multiply',
                 borderRadius: '50%',
               }}
             />
@@ -281,12 +280,12 @@ export default function Login() {
             }}
           >
             <img
-              src="/ashok_stambh.jpg"
+              src="/ashok_stambh.png"
               alt="Emblem"
               style={{
                 height: 50,
                 width: 50,
-                objectFit: 'cover',
+                objectFit: 'contain',
                 borderRadius: '50%',
               }}
             />

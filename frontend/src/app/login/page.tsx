@@ -39,8 +39,8 @@ export default function Login() {
           zIndex: 0,
           backgroundImage: "url('/parliament_bg.jpg')",
           backgroundSize: 'cover',
-          backgroundPosition: 'center 35%',
-          filter: 'brightness(0.45) saturate(1.05) sepia(0.15)',
+          backgroundPosition: 'center top',
+          filter: 'brightness(0.65) saturate(1.2)',
         }}
       />
 
@@ -51,7 +51,7 @@ export default function Login() {
           inset: 0,
           zIndex: 1,
           background:
-            'linear-gradient(180deg, rgba(5,15,40,0.35) 0%, rgba(5,18,45,0.6) 55%, rgba(3,12,35,0.85) 100%)',
+            'linear-gradient(180deg, rgba(5,15,40,0.15) 0%, rgba(5,18,45,0.45) 55%, rgba(3,12,35,0.85) 100%)',
         }}
       />
 
@@ -143,10 +143,10 @@ export default function Login() {
             }}
           >
             <img
-              src="/ashok_stambh.png"
+              src="/emblem_gold.svg"
               alt="Emblem of India"
               style={{
-                height: 95,
+                height: 110,
                 width: 'auto',
                 borderRadius: '50%',
               }}
@@ -261,12 +261,12 @@ export default function Login() {
           <div
             style={{
               position: 'absolute',
-              top: -50,
+              top: -60,
               left: '50%',
               transform: 'translateX(-50%)',
               zIndex: 10,
-              width: 100,
-              height: 100,
+              width: 120,
+              height: 120,
               borderRadius: '50%',
               background:
                 'linear-gradient(145deg, #fffbe8 0%, #f5e070 45%, #e8c230 100%)',
@@ -280,11 +280,11 @@ export default function Login() {
             }}
           >
             <img
-              src="/ashok_stambh.png"
+              src="/emblem_gold.svg"
               alt="Emblem"
               style={{
-                height: 70,
-                width: 70,
+                height: 90,
+                width: 90,
                 objectFit: 'contain',
                 borderRadius: '50%',
               }}

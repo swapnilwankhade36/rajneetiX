@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 140" fill="none">
+  <!-- Base/pedestal -->
+  <rect x="25" y="118" width="70" height="10" rx="2" fill="#8B6914"/>
+  <rect x="30" y="110" width="60" height="10" rx="2" fill="#A07820"/>
+  <!-- Abacus ring -->
+  <ellipse cx="60" cy="107" rx="35" ry="7" fill="#B8860B"/>
+  <!-- Chakra wheel (24 spokes) -->
+  <circle cx="60" cy="107" r="6" fill="#1a1a6b" stroke="#1a1a6b" strokeWidth="1"/>
+  <!-- 4 lions (simplified blocks) -->
+  <!-- Front lion -->
+  <ellipse cx="60" cy="78" rx="14" ry="20" fill="#C8960C"/>
+  <circle cx="60" cy="60" r="11" fill="#D4A017"/>
+  <!-- Left lion -->
+  <ellipse cx="38" cy="82" rx="10" ry="16" fill="#B8860B"/>
+  <circle cx="38" cy="68" r="8" fill="#C8960C"/>
+  <!-- Right lion -->
+  <ellipse cx="82" cy="82" rx="10" ry="16" fill="#B8860B"/>
+  <circle cx="82" cy="68" r="8" fill="#C8960C"/>
+  <!-- Back lion (smaller) -->
+  <ellipse cx="60" cy="86" rx="10" ry="14" fill="#A07820"/>
+  <!-- Mane details -->
+  <path d="M52 60 Q60 50 68 60" stroke="#8B6914" strokeWidth="1.5" fill="none"/>
+  <path d="M30 68 Q38 58 46 68" stroke="#8B6914" strokeWidth="1.5" fill="none"/>
+  <path d="M74 68 Q82 58 90 68" stroke="#8B6914" strokeWidth="1.5" fill="none"/>
+  <!-- Eyes -->
+  <circle cx="57" cy="59" r="1.5" fill="#1a1a00"/>
+  <circle cx="63" cy="59" r="1.5" fill="#1a1a00"/>
+  <circle cx="35" cy="67" r="1.2" fill="#1a1a00"/>
+  <circle cx="41" cy="67" r="1.2" fill="#1a1a00"/>
+  <circle cx="79" cy="67" r="1.2" fill="#1a1a00"/>
+  <circle cx="85" cy="67" r="1.2" fill="#1a1a00"/>
+  <!-- Base text area -->
+  <rect x="22" y="125" width="76" height="12" rx="1" fill="#8B6400"/>
+  <text x="60" y="135" textAnchor="middle" fontSize="7" fill="#FFD700" fontFamily="serif" fontWeight="bold">INDIA</text>
+</svg>

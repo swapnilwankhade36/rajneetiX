@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 440 500" fill="none">
+  <!-- Simplified India Map shape for cyan neon glow -->
+  <path d="M165 480 L140 460 L130 440 L120 420 L115 400 L120 380 L125 360 L110 340 L100 320 L95 300 L90 280 L80 260 L75 250 L60 240 L50 230 L40 220 L30 200 L35 180 L40 160 L50 140 L45 120 L40 100 L55 80 L70 60 L85 45 L100 40 L120 45 L140 30 L160 20 L180 15 L200 10 L220 15 L240 20 L260 25 L280 40 L290 60 L310 80 L320 100 L315 120 L320 140 L330 160 L350 180 L370 200 L380 220 L375 240 L380 260 L370 280 L360 300 L355 320 L365 340 L380 360 L395 375 L420 390 L430 410 L420 430 L400 440 L380 445 L360 440 L340 430 L320 415 L300 400 L280 380 L260 365 L245 400 L230 430 L210 455 L190 475 Z" 
+        stroke="rgba(0,180,255,0.7)" strokeWidth="2" fill="rgba(0,180,255,0.08)"/>
+  <!-- Decorative points/dots grid style -->
+  <circle cx="210" cy="120" r="1" fill="rgba(0,255,255,0.5)"/>
+  <circle cx="180" cy="180" r="1.5" fill="rgba(0,255,255,0.7)"/>
+  <circle cx="240" cy="240" r="1" fill="rgba(0,255,255,0.5)"/>
+  <circle cx="150" cy="320" r="2" fill="rgba(0,255,255,0.9)"/>
+  <circle cx="200" cy="380" r="1" fill="rgba(0,255,255,0.5)"/>
+</svg>

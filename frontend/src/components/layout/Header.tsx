@@ -4,28 +4,33 @@ import { Input } from '@/components/ui/input';
 
 interface HeaderProps {
   variant?: 'dark' | 'light';
+  hideLogo?: boolean;
 }
 
-export function Header({ variant = 'dark' }: HeaderProps) {
+export function Header({ variant = 'dark', hideLogo = false }: HeaderProps) {
   const isDark = variant === 'dark';
   
   return (
-    <header className={`w-full h-16 flex items-center justify-between px-6 z-50 ${isDark ? 'bg-[#002B5B] text-white' : 'bg-white text-slate-900 border-b border-slate-200'}`}>
+    <header className={`w-full h-16 flex items-center justify-between px-6 z-40 ${isDark ? 'bg-[#002B5B] text-white' : 'bg-white text-slate-900 border-b border-slate-200'}`}>
       <div className="flex items-center gap-4">
-        {/* Emblem placeholder */}
-        <div className="flex flex-col items-center justify-center">
-            <div className={`w-8 h-10 flex items-center justify-center font-bold text-[8px] leading-tight text-center ${isDark ? 'text-amber-400' : 'text-amber-600'}`}>
-                Emblem
+        {!hideLogo && (
+          <>
+            {/* Emblem placeholder */}
+            <div className="flex flex-col items-center justify-center">
+                <div className={`w-8 h-10 flex items-center justify-center font-bold text-[8px] leading-tight text-center ${isDark ? 'text-amber-400' : 'text-amber-600'}`}>
+                    Emblem
+                </div>
+                <span className={`text-[8px] font-bold mt-1 ${isDark ? 'text-slate-300' : 'text-slate-500'}`}>सत्यमेव जयते</span>
             </div>
-            <span className={`text-[8px] font-bold mt-1 ${isDark ? 'text-slate-300' : 'text-slate-500'}`}>सत्यमेव जयते</span>
-        </div>
-        
-        <div className="flex items-center gap-3 border-l border-white/20 pl-4 h-10">
-            <Link href="/dashboard" className="flex items-center gap-2">
-                <h1 className="text-xl font-bold tracking-tight">Rajneeti<span className={isDark ? "text-slate-300" : "text-slate-500"}>X</span></h1>
-                <ShieldCheckIcon className={`w-5 h-5 ${isDark ? 'text-blue-200' : 'text-blue-600'}`} />
-            </Link>
-        </div>
+            
+            <div className="flex items-center gap-3 border-l border-white/20 pl-4 h-10">
+                <Link href="/dashboard" className="flex items-center gap-2">
+                    <h1 className="text-xl font-bold tracking-tight">Rajneeti<span className={isDark ? "text-slate-300" : "text-slate-500"}>X</span></h1>
+                    <ShieldCheckIcon className={`w-5 h-5 ${isDark ? 'text-blue-200' : 'text-blue-600'}`} />
+                </Link>
+            </div>
+          </>
+        )}
       </div>
 
       <div className="flex-1 max-w-2xl px-12">

@@ -65,8 +65,8 @@ export default function Login() {
           height: 720,
           left: '-40px',
           top: '140px',
-          backgroundImage:
-            "url('https://upload.wikimedia.org/wikipedia/commons/e/e4/India_map_en.svg')",
+          top: '140px',
+          backgroundImage: "url('/map_india.svg')",
           backgroundSize: 'contain',
           backgroundRepeat: 'no-repeat',
           backgroundPosition: 'center',
@@ -146,7 +146,7 @@ export default function Login() {
             }}
           >
             <img
-              src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/55/Emblem_of_India.svg/800px-Emblem_of_India.svg.png"
+              src="/emblem.svg"
               alt="Emblem of India"
               style={{ height: 72, width: 'auto' }}
             />
@@ -279,7 +279,7 @@ export default function Login() {
             }}
           >
             <img
-              src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/55/Emblem_of_India.svg/800px-Emblem_of_India.svg.png"
+              src="/emblem.svg"
               alt="Emblem"
               style={{ height: 50, width: 'auto' }}
             />

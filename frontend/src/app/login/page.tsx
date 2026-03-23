@@ -65,7 +65,6 @@ export default function Login() {
           height: 720,
           left: '-40px',
           top: '140px',
-          top: '140px',
           backgroundImage: "url('/map_india.svg')",
           backgroundSize: 'contain',
           backgroundRepeat: 'no-repeat',

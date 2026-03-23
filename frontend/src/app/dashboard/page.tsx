@@ -3,29 +3,24 @@ import { Card, CardContent } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { LandmarkIcon, ShieldCheckIcon, AlertCircleIcon, UsersIcon, StarIcon, CheckCircle2Icon } from 'lucide-react';
 import Link from 'next/link';
+import Image from 'next/image';
 
 export default function Dashboard() {
   return (
-    <div className="min-h-screen bg-[#F9FAFB] font-sans flex flex-col relative">
-      {/* Background Watermark */}
-      <div className="absolute bottom-0 right-0 w-[800px] h-[800px] bg-[url('https://upload.wikimedia.org/wikipedia/commons/thumb/e/e4/India_map_en.svg/800px-India_map_en.svg.png')] bg-no-repeat bg-contain opacity-[0.03] z-0 pointer-events-none translate-x-1/4 translate-y-1/4" />
-      
-      <Header variant="dark" />
-      
-      <main className="flex-1 w-full max-w-7xl mx-auto px-6 lg:px-12 py-10 flex flex-col z-10">
+    <div className="min-h-screen bg-[#F4F7F6] font-sans relative">
+      <Header />
+
+      {/* Decorative India Map Output on Right */}
+      <div className="absolute right-0 top-0 w-1/3 h-[90vh] bg-[url('https://upload.wikimedia.org/wikipedia/commons/e/e4/India_map_en.svg')] bg-no-repeat bg-right-top bg-contain opacity-5 pointer-events-none z-0 mix-blend-multiply" />
+
+      {/* Main Content Container */}
+      <main className="max-w-[1400px] mx-auto px-8 py-10 relative z-10">
         
-        {/* Welcome Hero */}
-        <div className="mb-10 animate-in fade-in slide-in-from-bottom-4 duration-500">
-          <h1 className="text-4xl text-slate-800 font-light tracking-tight mb-2">
+        {/* Welcome Section */}
+        <div className="mb-10">
+          <h1 className="text-3xl text-slate-800 font-medium">
             Welcome, Citizen <span className="font-bold text-slate-900">Rohan Joshi!</span>
           </h1>
-          <p className="text-xl text-slate-500 font-medium">Your Portal for Accountable Governance.</p>
-        </div>
-
-        {/* SECTION: Sabhas (3-Column Grid) */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
-          
-          {/* Lok Sabha */}
           <Card className="bg-blue-50/50 border-blue-100 shadow-sm hover:shadow-md transition-shadow relative overflow-hidden group">
             <CardContent className="p-8 flex flex-col h-full">
               <div className="mb-6 bg-blue-100 w-16 h-16 rounded-2xl flex items-center justify-center text-blue-600">

@@ -37,7 +37,7 @@ export default function Login() {
           position: 'absolute',
           inset: 0,
           zIndex: 0,
-          backgroundImage: "url('/parliament.jpg')",
+          backgroundImage: "url('/parliament_bg.jpg')",
           backgroundSize: 'cover',
           backgroundPosition: 'center 35%',
           filter: 'brightness(0.45) saturate(1.05) sepia(0.15)',
@@ -145,9 +145,14 @@ export default function Login() {
             }}
           >
             <img
-              src="/emblem.svg"
+              src="/ashok_stambh.jpg"
               alt="Emblem of India"
-              style={{ height: 72, width: 'auto' }}
+              style={{
+                height: 72,
+                width: 'auto',
+                mixBlendMode: 'multiply',
+                borderRadius: '50%',
+              }}
             />
             <span
               style={{
@@ -278,9 +283,14 @@ export default function Login() {
             }}
           >
             <img
-              src="/emblem.svg"
+              src="/ashok_stambh.jpg"
               alt="Emblem"
-              style={{ height: 50, width: 'auto' }}
+              style={{
+                height: 50,
+                width: 50,
+                objectFit: 'cover',
+                borderRadius: '50%',
+              }}
             />
             <span
               style={{

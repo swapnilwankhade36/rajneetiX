@@ -143,13 +143,11 @@ export default function Login() {
             }}
           >
             <img
-              src="/Gemini_Emblem.png"
+              src="/Gemini_Emblem_transparent.png"
               alt="Emblem of India"
               style={{
                 height: 110,
                 width: 'auto',
-                borderRadius: '50%',
-                mixBlendMode: 'multiply',
               }}
             />
             <span
@@ -281,14 +279,12 @@ export default function Login() {
             }}
           >
             <img
-              src="/Gemini_Emblem.png"
+              src="/Gemini_Emblem_transparent.png"
               alt="Emblem"
               style={{
                 height: 90,
                 width: 90,
                 objectFit: 'contain',
-                borderRadius: '50%',
-                mixBlendMode: 'multiply',
               }}
             />
             <span

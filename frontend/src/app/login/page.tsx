@@ -27,7 +27,7 @@ export default function Login() {
         
         <div className="flex flex-col items-center">
             {/* Gold Ashoka Pillar Mock */}
-            <div className="w-12 h-16 flex items-center justify-center font-bold text-[10px] leading-tight text-center text-[#D4AF37] mb-2 border-2 border-[#D4AF37] rounded-full shadow-[0_0_15px_rgba(212,175,55,0.4)]">
+            <div className="w-12 h-16 flex items-center justify-center font-bold text-[10px] leading-tight text-center text-[#D4AF37] mb-2 border-2 border-[#D4AF37] rounded-full shadow-[0_0_15px_rgba(212,175,55,0.4)] bg-black/40">
                 Emblem
             </div>
             <p className="text-[11px] uppercase font-bold text-slate-200 tracking-[0.2em] drop-shadow-md">
@@ -102,14 +102,15 @@ export default function Login() {
                     </div>
                   </div>
 
-                  <div className="grid grid-cols-2 gap-4 pt-4">
-                    <Button className="h-14 bg-[#1D4ED8] hover:bg-blue-700 text-white font-bold rounded-xl shadow-[0_0_20px_rgba(29,78,216,0.6)] text-base transition-all">
+                  {/* Buttons Stacked Vertically as per subagent report */}
+                  <div className="flex flex-col gap-4 pt-4">
+                    <Button className="w-full h-14 bg-[#1D4ED8] hover:bg-blue-700 text-white font-bold rounded-xl shadow-[0_0_20px_rgba(29,78,216,0.6)] text-base transition-all">
                       <KeyRoundIcon className="w-5 h-5 mr-2" />
                       Request OTP
                     </Button>
                     <Link href="/dashboard" className="w-full">
                       <Button className="w-full h-14 bg-[#1D4ED8] hover:bg-blue-700 text-white font-bold rounded-xl shadow-[0_0_20px_rgba(29,78,216,0.6)] text-base transition-all">
-                        Login via Password
+                        Login with Password
                       </Button>
                     </Link>
                   </div>
@@ -134,14 +135,15 @@ export default function Login() {
                     </div>
                   </div>
 
-                  <div className="grid grid-cols-2 gap-4 pt-4">
-                    <Button className="h-14 bg-[#1D4ED8] hover:bg-blue-700 text-white font-bold rounded-xl shadow-[0_0_20px_rgba(29,78,216,0.6)] text-base transition-all">
+                  {/* Buttons Stacked Vertically */}
+                  <div className="flex flex-col gap-4 pt-4">
+                    <Button className="w-full h-14 bg-[#1D4ED8] hover:bg-blue-700 text-white font-bold rounded-xl shadow-[0_0_20px_rgba(29,78,216,0.6)] text-base transition-all">
                       <KeyRoundIcon className="w-5 h-5 mr-2" />
                       Request OTP
                     </Button>
                     <Link href="/dashboard" className="w-full">
                       <Button className="w-full h-14 bg-[#1D4ED8] hover:bg-blue-700 text-white font-bold rounded-xl shadow-[0_0_20px_rgba(29,78,216,0.6)] text-base transition-all">
-                        Login via Password
+                        Login with Password
                       </Button>
                     </Link>
                   </div>

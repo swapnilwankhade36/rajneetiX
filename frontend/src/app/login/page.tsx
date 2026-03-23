@@ -146,7 +146,7 @@ export default function Login() {
               src="/ashok_stambh.png"
               alt="Emblem of India"
               style={{
-                height: 72,
+                height: 95,
                 width: 'auto',
                 borderRadius: '50%',
               }}
@@ -261,12 +261,12 @@ export default function Login() {
           <div
             style={{
               position: 'absolute',
-              top: -44,
+              top: -50,
               left: '50%',
               transform: 'translateX(-50%)',
               zIndex: 10,
-              width: 86,
-              height: 86,
+              width: 100,
+              height: 100,
               borderRadius: '50%',
               background:
                 'linear-gradient(145deg, #fffbe8 0%, #f5e070 45%, #e8c230 100%)',
@@ -283,8 +283,8 @@ export default function Login() {
               src="/ashok_stambh.png"
               alt="Emblem"
               style={{
-                height: 50,
-                width: 50,
+                height: 70,
+                width: 70,
                 objectFit: 'contain',
                 borderRadius: '50%',
               }}

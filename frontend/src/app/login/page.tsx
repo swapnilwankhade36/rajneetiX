@@ -65,13 +65,11 @@ export default function Login() {
           height: 720,
           left: '-40px',
           top: '140px',
-          backgroundImage: "url('/map_india.svg')",
+          backgroundImage: "url('/map_india.jpg')",
           backgroundSize: 'contain',
           backgroundRepeat: 'no-repeat',
           backgroundPosition: 'center',
-          filter:
-            'brightness(5) saturate(200) hue-rotate(180deg) drop-shadow(0 0 18px rgba(0,210,255,0.85))',
-          opacity: 0.28,
+          opacity: 0.6,
           mixBlendMode: 'screen',
         }}
       />

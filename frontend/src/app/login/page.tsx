@@ -136,7 +136,7 @@ export default function Login() {
               position: 'absolute',
               left: '50%',
               transform: 'translateX(-50%)',
-              top: 6,
+              top: 5,
               display: 'flex',
               flexDirection: 'column',
               alignItems: 'center',
@@ -146,7 +146,7 @@ export default function Login() {
               src="/Emblem_of_India_gold.svg"
               alt="Emblem of India"
               style={{
-                height: 115,
+                height: 80,
                 width: 'auto',
               }}
             />
